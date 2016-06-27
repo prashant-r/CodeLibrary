@@ -14,7 +14,7 @@ import GraphStruct.GraphInput;
 import GraphStruct.SimpleGraph;
 import GraphStruct.Vertex;
 
-public class ScalingFordFulkerson implements FlowAlgorithm {
+public class ScalingFordFulkerson{
 
 	private static SimpleGraph G;
 	private static Hashtable<String, Vertex> vertices;
@@ -204,10 +204,6 @@ public class ScalingFordFulkerson implements FlowAlgorithm {
 		
 		return maxflow;
 		//
-	}
-	@Override
-	public FlowAlgorithmType getType() {
-		return FlowAlgorithmType.SCALING_FORD_FULKERSON;
 	}
 	
 }

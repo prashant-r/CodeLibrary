@@ -17,7 +17,7 @@ import GraphStruct.Vertex;
  * Faster version of the algorithm using the gap relabelling heuristic and FIFO style node selection
  * runtime O(n^3);
  */
-public class PreFlowPushImproved implements FlowAlgorithm {
+public class PreFlowPushImproved{
 
 	private static SimpleGraph G;
 	private static Hashtable<String, Vertex> vertices;
@@ -139,7 +139,6 @@ public class PreFlowPushImproved implements FlowAlgorithm {
 	 * Main method that computes the maximum flow
 	 * 
 	 */
-	@Override
 	public double findMaxFlow()
 	{	
 		if(graphModified)
@@ -329,13 +328,5 @@ public class PreFlowPushImproved implements FlowAlgorithm {
 		long endTime = System.currentTimeMillis();
 		System.out.println(endTime - startTime);
 		System.out.println(maxFlow);
-	}
-	/**
-	 * Returns the enum concerning this algorithm
-	 * @return FlowAlgorithmType
-	 */
-	@Override
-	public FlowAlgorithmType getType() {
-		return FlowAlgorithmType.PREFLOW_PUSH;
 	}
 }
